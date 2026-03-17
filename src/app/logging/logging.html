@@ -1,0 +1,13 @@
+@if(loggingService.message.length){
+<div class="card">
+  <div class="card-header">
+    Messages
+  </div>
+  <div class="card-body">
+    <button class="btn-close float-end" (click)="loggingService.clearMessage() "></button>
+    @for (message of loggingService.message; track $index) {
+       <p>{{message}}</p>
+    }
+  </div>
+</div>
+}

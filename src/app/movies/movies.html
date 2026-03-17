@@ -1,1 +1,19 @@
-<h2>Movies</h2>
+<app-movie-detail [movie]="selectedMovie"></app-movie-detail>
+
+<!--Verileri Ekrana Yazdırma-->
+<div class="card">
+  <div class="card-header">
+    {{title}}
+  </div>
+  <ul class="list-group list-group-flush">
+    @for (movie of movies; track $index) {
+    <li class="list-group-item"
+    (click)="onSelect(movie)"
+    [class.active]="movie===selectedMovie">
+      <span class="badge badge-primary" style="background-color: black; color: white">{{ movie.id }}</span> - {{ movie.name }}
+      <button type="button" class="btn-close float-end" aria-label="Close"></button>
+
+    </li>
+    }
+  </ul>
+</div>
