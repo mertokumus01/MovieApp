@@ -1,12 +1,11 @@
-import { MoviesComponent } from './movies/movies';
 import { Component, signal } from '@angular/core';
 import { Logging } from "./logging/logging";
-import { AppRoutingModule } from './app-routing-module';
+import { RouterOutlet, RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MoviesComponent, Logging,AppRoutingModule],
+  imports: [Logging, RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
