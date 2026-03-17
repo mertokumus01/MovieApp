@@ -1,5 +1,9 @@
 import { Routes } from '@angular/router';
 import { MoviesComponent } from './movies/movies';
+import { Dashboard } from './dashboard/dashboard';
 
 export const routes: Routes = [
-  {path:'movies',component: MoviesComponent}];
+  {path:'',redirectTo:'/dashboard',pathMatch:'full'},
+  {path:'dashboard',component:Dashboard },
+  {path:'movies',component: MoviesComponent}
+];

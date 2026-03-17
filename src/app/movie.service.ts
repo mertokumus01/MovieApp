@@ -8,7 +8,7 @@ import { LoggingService } from './logging.service';
   providedIn: 'root',
 })
 export class MovieService {
-  constructor(private loggingService: LoggingService) {}
+  constructor(public loggingService: LoggingService) {}
   getMovies(): Observable<MovieType[]> {
     this.loggingService.addMessage('MovieService: listing movies');
     return of(Movies);
