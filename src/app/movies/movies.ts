@@ -1,15 +1,14 @@
-import { Movies } from './../movie.datasource';
 import { Component } from '@angular/core';
 import { MovieType } from '../movie';
 import { FormsModule } from '@angular/forms';
-import { MovieDetail } from '../movie-detail/movie-detail';
 import { MovieService } from '../movie.service';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.html',
   standalone: true,
-  imports: [FormsModule, MovieDetail],
+  imports: [FormsModule, RouterLink],
   styleUrls: ['./movies.css'],
 })
 export class MoviesComponent {

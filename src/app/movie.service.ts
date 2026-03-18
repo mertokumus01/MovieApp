@@ -13,4 +13,10 @@ export class MovieService {
     this.loggingService.addMessage('MovieService: listing movies');
     return of(Movies);
   }
+
+  getMovie(id: number): Observable<MovieType>{
+  this.loggingService.addMessage('MovieService: get detail by id='+id)
+  return of(Movies.find(movie => movie.id === id)!);
+}
+
 }
